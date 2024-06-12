@@ -1,0 +1,25 @@
+connect-azaccount
+
+Get-AzSubscription
+
+Set-AzContext -SubscriptionName "Dinesh_Test_Hub"
+
+get-azresourcegroup
+Get-AzResource | Select-Object Name, ResourceGroupName
+Get-AzResource | Format-Table
+
+Remove-AzVM -ResourceGroupName "MyResourceGroup" -Name "vm1" -Force 
+Remove-AzResourceGroup -Name "MyResourceGroup"
+
+New-AzResourceGroupDeployment -ResourceGroupName "MyResourceGroup" -TemplateFile 'template.json' -TemplateParameterFile 'parameters.json'
+
+#
+Setup new repo in github, connect to vscode.
+Push and pull changes to github, commit changes. 
+Connect to azure subscription.
+Create new resource group. 
+Create new vm using template. 
+Remove rg and vms using powershell codes. 
+#
+
+
